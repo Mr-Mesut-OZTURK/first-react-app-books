@@ -1,19 +1,38 @@
-import React, { useState } from 'react'
+import { technologiesData } from 'dummy'
+import React from 'react'
 
-const AboutPage = () => {
+
+
+const BooksPage = () => {
 
     return (
-        <div>
-            About us
-            {/* <h1>{this.state.persons.email}</h1>
-                <h1>{this.state.persons.cell}</h1>
-                <h1>{this.state.persons.phone}</h1>
-                <h1>{this.state.persons.gender}</h1> */}
-            {/* <h1>{this.state.persons.location.city}</h1> */}
-            {/* {console.log(this.state.persons.name.json()["title"])} */}
-            {/* <Album /> */}
+        <div className="main" id="about">
+            <h2 className="about__title">What I Know</h2>
+            <div className="about__cards__container" id="about__cards__container">
+
+                {
+                    technologiesData.map((item) => {
+
+                        return (
+                            <div className="about__card" key={item.cardTitle}>
+                                <div
+                                    style={{
+                                        backgroundImage: `url('${item.cardImg}')`
+                                    }}
+                                    className="about__card__img__container"
+                                />
+
+                                <div className="about__card__info">
+                                    <h3>${item.cardTitle}</h3>
+                                </div>
+                            </div>
+
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }
 
-export default AboutPage;
+export default BooksPage;

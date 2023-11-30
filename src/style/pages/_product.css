@@ -16,21 +16,28 @@
     /* background-color: teal; */
 }
 
-.book.card {
+.book_card {
     width: 300px;
-    min-height: 400px;
+    height: 500px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+}
 
+.book_card:hover {
+    box-shadow: 1px 1px 5px 0px #ccc;
 }
 
 .card__img {
-    background-color: rgb(110, 0, 0);
+    /* background-color: rgb(110, 0, 0); */
     /* background-image: url(./images/a-Dolls-house.jpg); */
     background-position: center;
     background-size: 90%;
     background-repeat: no-repeat;
-    height: 500px;
+    height: 300px;
+    overflow: hidden;
 }
 
 .card-body {
@@ -39,4 +46,4 @@
     justify-content: space-between;
     /* align-items: center; */
     text-align: center;
-} 
+}

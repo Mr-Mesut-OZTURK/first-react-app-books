@@ -1,40 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { categoriesData } from 'dummy';
 
 
 const HomePage = () => {
-
-    const kartlar = [
-        {
-            image: "https://picsum.photos/200/300",
-            title: "başlık 1",
-            desc: "Buraya uzun bir açıklama gelebilir",
-            b1: "1",
-            b2: "2",
-            b3: "3"
-        },
-        {
-            image: "https://picsum.photos/200/300",
-            title: "başlık 2",
-            desc: "Buraya uzun bir açıklama gelebilir",
-            b1: "1",
-            b2: "2",
-        },
-        {
-            image: "https://picsum.photos/200/300",
-            title: "başlık 3",
-            desc: "Buraya uzun bir açıklama gelebilir",
-            b1: "1",
-            b3: "3"
-        },
-        {
-            image: "https://picsum.photos/200/300",
-            title: "başlık 4",
-            desc: "Buraya uzun bir açıklama gelebilir",
-            b2: "2",
-            b3: "3"
-        },
-    ]
-
 
     return (
 
@@ -54,23 +22,18 @@ const HomePage = () => {
 
             </section>
 
-            <section className="home__section bg-light">
+            <section className="card_container">
                 {
-                    kartlar.map((card, index) => (
+                    categoriesData.map((card, index) => (
                         <article className="home__card" key={index}>
 
-                            <div className="card__img">
+                            <div className="home_card__img">
                                 <img src={card.image} alt="" />
                             </div>
 
                             <div className="card__info">
                                 <h2>{card.title}</h2>
-                                <p>{card.desc}</p>
-                                <div className="badge__container">
-                                    {card.b1 ? <span className="badge green">{card.b1}</span> : ""}
-                                    {card.b2 ? <span className="badge blue">{card.b2}</span> : ""}
-                                    {card.b3 ? <span className="badge red">{card.b3}</span> : ""}
-                                </div>
+                                <p>{card.description?.slice(0, 100)}</p>
                             </div>
 
                         </article>

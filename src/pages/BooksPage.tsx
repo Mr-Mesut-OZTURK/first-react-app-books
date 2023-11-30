@@ -10,9 +10,9 @@ const ProjectsPage = () => {
 
       <div className="product__list">
         {
-          demoBooksData.map(
+          demoBooksData?.slice(0, 14).map(
             (book, index) => (
-              <BookItem book={book} key={index} />
+              <BookItem book={book} key={index} number={index} />
             )
           )
         }
