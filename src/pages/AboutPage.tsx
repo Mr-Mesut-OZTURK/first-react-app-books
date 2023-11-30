@@ -6,9 +6,9 @@ import React from 'react'
 const BooksPage = () => {
 
     return (
-        <div className="main" id="about">
+        <div className="about">
             <h2 className="about__title">What I Know</h2>
-            <div className="about__cards__container" id="about__cards__container">
+            <div className="about__cards__container" >
 
                 {
                     technologiesData.map((item) => {

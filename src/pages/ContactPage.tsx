@@ -4,7 +4,7 @@ import React from 'react'
 const ContactPage = () => {
 
     return (
-        <div className="main" id="sign-up">
+        <div className="contact">
             <div className="main__container">
 
                 <div className="main__content">
