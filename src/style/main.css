@@ -142,6 +142,8 @@
     outline: none;
     position: relative;
     z-index: 1;
+    border-radius: 10px;
+
 }
 
 
@@ -158,6 +160,9 @@
     z-index: -1;
 }
 
+.main__btn:hover::after {
+    width: 100%;
+}
 
 .main__img--container {
     text-align: center;
@@ -184,6 +189,8 @@
     background: #ff512f;
     background: -webkit-linear-gradient(to right, #dd2476, #ff512f);
     background: linear-gradient(to right, #dd2476, #ff512f);
+    border-radius: 10px;
+
 }
 
 

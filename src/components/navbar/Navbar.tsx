@@ -24,24 +24,24 @@ export const Navbar = () => {
 
                 <ul className={`navbar__menu ${isMobileNavOpen ? "active" : ""}`}>
 
-                    <li className="navber__item">
-                        <Link to="/" className="navbar__links" id="home-page">Home</Link>
+                    <li className="navber__item" onClick={openMenu}>
+                        <Link to="/#navbar_top" href='#navbar_top' className="navbar__links" id="home-page">Home</Link>
                     </li>
 
-                    <li className="navber__item">
-                        <Link to="/product" className="navbar__links" id="product-page">Books</Link>
+                    <li className="navber__item" onClick={openMenu}>
+                        <Link to="/product#navbar_top" className="navbar__links" id="product-page">Books</Link>
                     </li>
 
-                    <li className="navber__item">
-                        <Link to="/about" className="navbar__links" id="about-page">About</Link>
+                    <li className="navber__item" onClick={openMenu}>
+                        <Link to="/about#navbar_top" className="navbar__links" id="about-page">About</Link>
                     </li>
 
-                    <li className="navber__item">
+                    {/* <li className="navber__item" onClick={openMenu}>
                         <Link to="/contact" className="navbar__links" id="contact-page">Contact</Link>
-                    </li>
+                    </li> */}
 
                     <li className="navber__btn">
-                        <Link to="/signup" className="button" id="signup">Sign up</Link>
+                        <Link to="/contact#navbar_top" className="button" id="signup">Contact</Link>
                     </li>
 
                 </ul>

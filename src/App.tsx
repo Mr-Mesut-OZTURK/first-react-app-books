@@ -6,6 +6,7 @@ const App = () => {
 
     return (
         <div>
+            <div id="navbar_top" />
             <AppRouter />
         </div>
     )
